@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+</head>
+<body>
+
+    <h1>Você nasceu em que país?</h1>
+    País em que você nasceu:  <input type="text" name="ps1" id="ps1"> 
+    <input type="button" value="Verificar" onclick="clickar()">
+    <div id="nasc">
+
+    </div>
+
+    <script>
+    
+        function clickar(){
+            
+            var origem = window.document.getElementById('ps1')
+            var nasc = window.document.getElementById('nasc')
+            var pais = String(origem.value)
+
+            nasc.innerHTML =`<p>Seu páis de origem é <strong>${pais}.</strong></p>`
+        
+            if(pais.toUpperCase() == 'BRASIL'){
+                nasc.innerHTML += `<p><strong>Brasileiro!</strong></p>`
+            }else{
+                nasc.innerHTML += `<p><strong>Estrangeiro!</strong></p>`
+            }
+        }
+
+    </script>
+
+    
+</body>
+</html>
